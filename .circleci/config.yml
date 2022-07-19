@@ -15,7 +15,6 @@ jobs:
       - node/install:
           node-version: '16.0'         
       - checkout
-      # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
           command: |
@@ -47,15 +46,14 @@ jobs:
       # more setup needed for aws, node, elastic beanstalk
     steps:
       - node/install:
-          node-version: '14.15' 
+          node-version: '16.0' 
       - eb/setup
       - aws-cli/setup
       - checkout
       - run:
           name: Deploy App
           command: |
-            npm run api:deploy
-            npm run frontend:deploy
+            npm run deploy
             
 workflows:
   udagram:
