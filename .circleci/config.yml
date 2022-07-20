@@ -15,6 +15,7 @@ jobs:
       - node/install:
           node-version: '16.0'         
       - checkout
+      #install frontend and api dependencies
       - run:
           name: Install Front-End Dependencies
           command: |
@@ -27,10 +28,12 @@ jobs:
           name: Install API Dependencies
           command: |
            npm run api:install
+      #lint frontend
       - run:
           name: Front-End Lint
           command: |
             npm run frontend:lint
+      #build frontend and api
       - run:
           name: Front-End Build
           command: |
@@ -50,6 +53,7 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
+      #deploy frontend and api
       - run:
           name: Deploy App
           command: |
