@@ -62,7 +62,7 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - hold:
+      - hold1:
           filters:
             branches:
               only:
@@ -70,8 +70,8 @@ workflows:
           type: approval
       - build:
           requires:
-            - hold
-      - hold:
+            - hold1
+      - hold2:
           filters:
             branches:
               only:
@@ -81,4 +81,4 @@ workflows:
             - build
       - deploy:
           requires:
-            - hold
+            - hold2
