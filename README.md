@@ -2,10 +2,11 @@
 ## Udacity Full Stack Javascript Developer Project 4
 
 ---
+### Notes For Reviewer
+Changes made since last submission: added hold before build in config.yml for cirlceCi, updated docs/Pipeline_description.md to be more descriptive, and added eb setenv PORT=$PORT USERNAME=$USERNAME to deploy script for backend. I was unable to added unit test script for backend because the starter code readMe specifically says: "There are no Unit test on the back-end" [(https://github.com/udacity/nd0067-c4-deployment-process-project-starter/blob/master/README.md)].
 # Udagram: Project Overview
 
 Starter code was provided by Udacity including the api and frontend of Udagram, an Instagram-like app, as the focus of this project was deploying the app. In this project, I combined IAM, RDS, S3, and Elastic Beanstalk from AWS to deploy the app. In addition, I used circleCi for continuous integration and continuous deployment.
-
 
 ### Dependencies
 
@@ -21,3 +22,4 @@ Starter code was provided by Udacity including the api and frontend of Udagram, 
 - A S3 bucket for hosting uploaded pictures: [(http://bucket002398.s3-website-us-east-1.amazonaws.com/home)] - this is the endpoint to launch for the hosted working frontend application
 
 Screenshot of application is in docs folder.
+
